@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
+    "@emotion/react": "^11.1.1",
+    "@emotion/styled": "^11.0.0",
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
+    "twin.macro": "^1.12.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -34,5 +36,25 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "babelMacros": {
+    "twin": {
+      "styled": {
+        "import": "default",
+        "from": "@emotion/styled"
+      },
+      "css": {
+        "import": "css",
+        "from": "@emotion/react"
+      },
+      "global": {
+        "import": "Global",
+        "from": "@emotion/react"
+      },
+      "config": "tailwind.config.js",
+      "debugProp": true,
+      "debugPlugins": false,
+      "debug": false
+    }
   }
 }
